@@ -4,8 +4,64 @@
 /* Font for page */
 body {
   font-family: "Roboto Slab", serif;
+  background-color: ghostwhite;
 }
 
-body {
-  background-color: aliceblue;
+/* Navbar styles */
+/* Reset some defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: ghostwhite;
+  color: black;
+  padding: 2rem 2rem;
+  transition: transform 1.75s ease, opacity 0.75s ease;
+  z-index: 1000;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar li {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+  margin-left: 20px;
+  align-content: center;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Hidden state */
+.navbar.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+main {
+  margin-top: 80px; /* space so content isn't hidden under navbar */
+  padding: 2rem;
 }
