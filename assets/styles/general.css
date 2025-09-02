@@ -5,14 +5,8 @@
 body {
   font-family: "Roboto Slab", serif;
   background-color: ghostwhite;
-}
-
-/* Navbar styles */
-/* Reset some defaults */
-* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 /* Navbar styles */
@@ -59,9 +53,4 @@ body {
 .navbar.hide {
   transform: translateY(-100%);
   opacity: 0;
-}
-
-main {
-  margin-top: 80px; /* space so content isn't hidden under navbar */
-  padding: 2rem;
 }

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="/assets/styles/general.css" />
+    <link rel="stylesheet" href="/assets/styles/index.css" />
     <title>Home</title>
   </head>
   <body>
@@ -16,13 +17,26 @@
         </ul>
       </nav>
     </header>
+    <body>
+      <section class="hero">
+        <div class="image-container">
+          <img src="center.jpg" alt="Center" class="main-img" />
+          <img src="img1.jpg" alt="Petal 1" class="petal" />
+          <img src="img2.jpg" alt="Petal 2" class="petal" />
+          <img src="img3.jpg" alt="Petal 3" class="petal" />
+          <img src="img4.jpg" alt="Petal 4" class="petal" />
+        </div>
+      </section>
 
-    <main>
-      <p>Scroll down to see the navbar fade and slide up...</p>
-      <div style="height: 2000px"></div>
-    </main>
-
-    // Include the JavaScript file for navbar behavior
+      <section class="content">
+        <h2>Scroll down for more content...</h2>
+        <p style="height: 2000px"></p>
+      </section>
+    </body>
+    // Include the JavaScript file
     <script src="/assets/styles/navbar.js"></script>
+    //for navbar behavior
+    <script src="/assets/styles/flowerAnimation.js"></script>
+    //for flower animation
   </body>
 </html>

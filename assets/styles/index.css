@@ -1,0 +1,53 @@
+.hero {
+  width: 100%; /* full width */
+  height: 600vh; /* enough scroll space for multiple scrolls */
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: flex-start; /* vertical alignment handled by sticky */
+  position: relative;
+}
+
+.image-container {
+  position: sticky;
+  top: 50%; /* padding from top of viewport */
+  transform: translateY(100); /* no need to offset, sticky top handles it */
+  width: 250px;
+  height: 250px;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.petal {
+  opacity: 0;
+  transform: translate(0, 0) scale(0.5);
+}
+
+.active .petal1 {
+  transform: translate(-220px, 0) scale(1);
+  opacity: 1;
+}
+.active .petal2 {
+  transform: translate(220px, 0) scale(1);
+  opacity: 1;
+}
+.active .petal3 {
+  transform: translate(0, -220px) scale(1);
+  opacity: 1;
+}
+.active .petal4 {
+  transform: translate(0, 220px) scale(1);
+  opacity: 1;
+}
+
+main {
+  height: 2000px;
+}
