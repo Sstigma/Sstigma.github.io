@@ -1,24 +1,21 @@
 .hero {
-  width: 100%; /* full width */
-  height: 600vh; /* enough scroll space for multiple scrolls */
+  height: 100vh; /* enough scroll space for multiple scrolls */
   display: flex;
   justify-content: center; /* horizontal centering */
-  align-items: flex-start; /* vertical alignment handled by sticky */
-  position: relative;
 }
 
 .image-container {
   position: sticky;
-  top: 50%; /* padding from top of viewport */
+  align-items: flex-start;
+  top: 40%; /* padding from top of viewport */
   transform: translateY(100); /* no need to offset, sticky top handles it */
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
+  margin-top: 300px;
 }
 
 .image-container img {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 200px;
   height: 200px;
   object-fit: cover;
@@ -49,5 +46,73 @@
 }
 
 main {
-  height: 2000px;
+  height: 100px;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 120px;
+  opacity: 0; /* Start invisible */
+  transform: scale(0.8);
+  transition: opacity 0.5s ease-out, transform 1s ease-out;
+  animation: popIn 1s ease-out forwards;
+}
+
+.intro-card {
+  background: lightblue;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 500px;
+  height: 600px;
+  text-align: justify;
+}
+
+.image-card {
+  background: lightgreen;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 500px;
+  height: 600px;
+  text-align: center;
+}
+
+.minicards-container {
+  background: transparent;
+  width: 300px;
+  height: 600px;
+}
+
+.minicard-top {
+  background: white;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.minicard-bottom {
+  background: white;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  text-align: center;
 }

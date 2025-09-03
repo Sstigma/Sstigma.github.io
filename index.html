@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/styles/general.css" />
     <link rel="stylesheet" href="/assets/styles/index.css" />
     <title>Home</title>
@@ -10,21 +11,70 @@
     <header class="navbar">
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="/content/pages/about.html">About</a></li>
-          <li><a href="/content/pages/contact.html">Contact</a></li>
-          <li><a href="/content/pages/portfolio.html">Portfolio</a></li>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="/content/pages/about.html">About</a>
+          </li>
+          <li>
+            <a href="/content/pages/contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="/content/pages/portfolio.html">Portfolio</a>
+          </li>
         </ul>
       </nav>
     </header>
     <body>
+      <div class="cards-container">
+        <div class="intro-card">
+          <h2>Card 1</h2>
+          <p>This is the content of Card 1.</p>
+        </div>
+        <div class="image-card">
+          <h2>Card 2</h2>
+          <p>This is the content of Card 2.</p>
+        </div>
+        <div class="minicards-container">
+          <div class="minicard-top">
+            <h3>Mini Card 1</h3>
+            <p>This is the content of Mini Card 1.</p>
+          </div>
+          <div class="minicard-bottom">
+            <h3>Mini Card 2</h3>
+            <p>This is the content of Mini Card 1.</p>
+          </div>
+        </div>
+      </div>
+
       <section class="hero">
         <div class="image-container">
-          <img src="center.jpg" alt="Center" class="main-img" />
-          <img src="img1.jpg" alt="Petal 1" class="petal" />
-          <img src="img2.jpg" alt="Petal 2" class="petal" />
-          <img src="img3.jpg" alt="Petal 3" class="petal" />
-          <img src="img4.jpg" alt="Petal 4" class="petal" />
+          <img
+            src="/assets/images/sampleImage.jpg"
+            alt="Center"
+            class="main-img"
+          />
+          <img
+            src="/assets/images/sampleImage.jpg"
+            alt="Petal 1"
+            class="petal"
+          />
+          <img
+            src="/assets/images/sampleImage.jpg"
+            alt="Petal 2"
+            class="petal"
+          />
+          <img
+            src="/assets/images/sampleImage.jpg"
+            alt="Petal 3"
+            class="petal"
+          />
+          <img
+            src="/assets/images/sampleImage.jpg"
+            alt="Petal 4"
+            class="petal"
+          />
         </div>
       </section>
 
@@ -37,6 +87,5 @@
     <script src="/assets/styles/navbar.js"></script>
     //for navbar behavior
     <script src="/assets/styles/flowerAnimation.js"></script>
-    //for flower animation
   </body>
 </html>

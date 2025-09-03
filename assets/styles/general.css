@@ -17,7 +17,7 @@ body {
   width: 100%;
   background: ghostwhite;
   color: black;
-  padding: 2rem 2rem;
+  padding-top: 2rem;
   transition: transform 1.75s ease, opacity 0.75s ease;
   z-index: 1000;
 }
@@ -25,7 +25,6 @@ body {
 .navbar nav {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .navbar li {
@@ -33,7 +32,6 @@ body {
   display: flex;
   margin-right: 20px;
   margin-left: 20px;
-  align-content: center;
 }
 
 .navbar a {
