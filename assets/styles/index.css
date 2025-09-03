@@ -1,5 +1,5 @@
 .hero {
-  height: 100vh; /* enough scroll space for multiple scrolls */
+  height: 200vh; /* enough scroll space for multiple scrolls */
   display: flex;
   justify-content: center; /* horizontal centering */
 }
