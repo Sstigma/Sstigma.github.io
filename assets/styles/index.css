@@ -1,5 +1,5 @@
 .hero {
-  height: 200vh; /* enough scroll space for multiple scrolls */
+  height: 150vh; /* enough scroll space for multiple scrolls */
   display: flex;
   justify-content: center; /* horizontal centering */
 }
@@ -43,10 +43,6 @@
 .active .petal4 {
   transform: translate(0, 220px) scale(1);
   opacity: 1;
-}
-
-main {
-  height: 100px;
 }
 
 @keyframes popIn {

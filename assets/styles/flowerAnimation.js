@@ -1,7 +1,7 @@
 const petals = document.querySelectorAll(".petal");
 
 // Number of viewport heights to complete bloom
-const totalScrolls = 1.8;
+const totalScrolls = 1;
 
 // Spread positions for 4 petals
 const spreadX = [-300, 300, 0, 0]; // left, right, top, bottom
