@@ -22,6 +22,11 @@ body {
   z-index: 1000;
 }
 
+.navbar-collapse {
+  padding-top: 10px;
+  
+}
+
 .navbar nav {
   display: flex;
   justify-content: center;
