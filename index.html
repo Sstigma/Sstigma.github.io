@@ -43,23 +43,39 @@
     </div>
   </nav>
   <body>
-    <div class="cards-container">
-      <div class="intro-card">
-        <h2>Card 1</h2>
-        <p>This is the content of Card 1.</p>
-      </div>
-      <div class="image-card">
-        <h2>Card 2</h2>
-        <p>This is the content of Card 2.</p>
-      </div>
-      <div class="minicards-container">
-        <div class="minicard-top">
-          <h3>Mini Card 1</h3>
-          <p>This is the content of Mini Card 1.</p>
+    <div class="container my-5">
+      <div class="row">
+        <!-- Intro Card: full width on mobile -->
+        <div class="col-12 col-md-4 order-1 intro-card mt-5">
+          <div class="card-body">
+            <h2 class="card-title">Card 1</h2>
+            <p class="card-text">This is the content of Card 1.</p>
+          </div>
         </div>
-        <div class="minicard-bottom">
-          <h3>Mini Card 2</h3>
-          <p>This is the content of Mini Card 1.</p>
+
+        <div class="col-12 col-md-8 order-2 d-flex flex-wrap">
+          <!-- Image Card -->
+          <div class="col-6 col-md-6 image-card mb-3 mb-md-0 mt-5">
+            <div class="card-body">
+              <h2 class="card-title">Card 2</h2>
+              <p class="card-text">This is the content of Card 2.</p>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-6 minicards-container mt-5">
+            <div class="card mb-1 shadow-sm minicard-top">
+              <div class="card-body">
+                <h3 class="card-subtitle">Mini Card 1</h3>
+                <p class="card-text">This is the content of Mini Card 1.</p>
+              </div>
+            </div>
+            <div class="card shadow-sm minicard-bottom">
+              <div class="card-body">
+                <h3 class="card-subtitle">Mini Card 2</h3>
+                <p class="card-text">This is the content of Mini Card 2.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
