@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,94 +11,118 @@
     <link rel="stylesheet" href="/assets/styles/index.css" />
     <title>Home</title>
   </head>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button
-      class="navbar-toggler ml-auto"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/content/pages/about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/content/pages/contact.html">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/content/pages/portfolio.html">Portfolio</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
   <body>
-    <div class="container my-5">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button
+        class="navbar-toggler ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/content/pages/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/content/pages/contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/content/pages/portfolio.html"
+              >Portfolio</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Cards -->
+    <div class="container my-5 cards-container">
       <div class="row">
-        <!-- Intro Card: full width on mobile -->
-        <div class="col-12 col-md-4 order-1 intro-card mt-5">
-          <div class="card-body">
-            <h2 class="card-title">Card 1</h2>
-            <p class="card-text">This is the content of Card 1.</p>
+        <!-- Intro Card -->
+        <div class="col-12 col-md-4 order-1 intro-card mt-5 intro-card">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <h2 class="card-title">Card 1</h2>
+              <p class="card-text">This is the content of Card 1.</p>
+            </div>
           </div>
         </div>
 
-        <div class="col-12 col-md-8 order-2 d-flex flex-wrap">
-          <!-- Image Card -->
-          <div class="col-6 col-md-6 image-card mb-3 mb-md-0 mt-5">
+        <!-- Image Card -->
+        <div class="col-12 col-md-4 order-2 image-card mt-5 image-card">
+          <div class="card shadow-sm h-100">
             <div class="card-body">
               <h2 class="card-title">Card 2</h2>
               <p class="card-text">This is the content of Card 2.</p>
             </div>
           </div>
+        </div>
 
-          <div class="col-6 col-md-6 minicards-container mt-5">
-            <div class="card mb-1 shadow-sm minicard-top">
-              <div class="card-body">
-                <h3 class="card-subtitle">Mini Card 1</h3>
-                <p class="card-text">This is the content of Mini Card 1.</p>
-              </div>
+        <!-- Mini Cards -->
+        <div class="col-12 col-md-4 order-3 minicards-container mt-5">
+          <div class="card mb-3 shadow-sm minicard-top">
+            <div class="card-body">
+              <h3 class="card-subtitle">Mini Card 1</h3>
+              <p class="card-text">This is the content of Mini Card 1.</p>
             </div>
-            <div class="card shadow-sm minicard-bottom">
-              <div class="card-body">
-                <h3 class="card-subtitle">Mini Card 2</h3>
-                <p class="card-text">This is the content of Mini Card 2.</p>
-              </div>
+          </div>
+          <div class="card shadow-sm minicard-bottom">
+            <div class="card-body">
+              <h3 class="card-subtitle">Mini Card 2</h3>
+              <p class="card-text">This is the content of Mini Card 2.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Flower Animation -->
     <section class="hero">
-      <div class="image-container">
+      <div class="image-container mt-5">
         <img
           src="/assets/images/sampleImage.jpg"
           alt="Center"
           class="main-img"
         />
-        <img src="/assets/images/sampleImage.jpg" alt="Petal 1" class="petal" />
-        <img src="/assets/images/sampleImage.jpg" alt="Petal 2" class="petal" />
-        <img src="/assets/images/sampleImage.jpg" alt="Petal 3" class="petal" />
-        <img src="/assets/images/sampleImage.jpg" alt="Petal 4" class="petal" />
+        <img
+          src="/assets/images/sampleImage.jpg"
+          alt="Petal 1"
+          class="petal petal1"
+        />
+        <img
+          src="/assets/images/sampleImage.jpg"
+          alt="Petal 2"
+          class="petal petal2"
+        />
+        <img
+          src="/assets/images/sampleImage.jpg"
+          alt="Petal 3"
+          class="petal petal3"
+        />
+        <img
+          src="/assets/images/sampleImage.jpg"
+          alt="Petal 4"
+          class="petal petal4"
+        />
       </div>
     </section>
+
+    <!-- Scripts -->
+    <script src="/assets/styles/navbar.js"></script>
+    <script src="/assets/styles/flowerAnimation.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
-  <!-- Include the JavaScript file -->
-  <script src="/assets/styles/navbar.js"></script>
-  <!-- //for navbar behavior -->
-  <script src="/assets/styles/flowerAnimation.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </html>

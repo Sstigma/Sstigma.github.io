@@ -1,18 +1,16 @@
 const petals = document.querySelectorAll(".petal");
-
-// Number of viewport heights to complete bloom
-const totalScrolls = 1;
-
-// Spread positions for 4 petals
-const spreadX = [-300, 300, 0, 0]; // left, right, top, bottom
-const spreadY = [0, 0, -300, 300];
+const container = document.querySelector(".image-container");
 
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
+  const progress = Math.min(Math.max(scrollY / window.innerHeight, 0), 1);
 
-  // progress: 0 = first scroll, 1 = after 5 viewport heights
-  let progress = scrollY / (window.innerHeight * totalScrolls);
-  progress = Math.min(Math.max(progress, 0), 1); // clamp 0 → 1
+  const containerWidth = container.offsetWidth;
+  const containerHeight = container.offsetHeight;
+
+  // Relative offsets (proportion of container size)
+  const spreadX = [-1.2 * containerWidth, 1.2 * containerWidth, 0, 0];
+  const spreadY = [0, 0, -1.2 * containerHeight, 1.2 * containerHeight];
 
   petals.forEach((petal, i) => {
     petal.style.transform = `translate(${spreadX[i] * progress}px, ${
