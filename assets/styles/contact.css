@@ -1,10 +1,14 @@
-.linkedin-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
+.LI-profile-badge {
+  transform: scale(0.9);
+  transform-origin: top center;
+  width: 100%;
   animation: popIn 0.5s ease-in-out;
-  margin-top: 10vh;
+  margin-top: 15vh;
+}
+@media (max-width: 480px) {
+  .LI-profile-badge {
+    transform: scale(0.8);
+  }
 }
 
 @keyframes popIn {
