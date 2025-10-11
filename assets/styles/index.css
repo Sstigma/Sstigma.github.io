@@ -6,6 +6,47 @@ h2 {
   text-align: justify;
 }
 
+/* Header Image + Text */
+
+.header-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin-top: 5vh;
+}
+
+.header-image {
+  width: 25vw;
+  height: 25vw;
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: popIn 1s ease-out forwards;
+  margin-bottom: 10px;
+}
+
+.intro-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: #333;
+  animation: popIn 1s ease-out forwards;
+  text-align: center;
+  font-weight: 800;
+}
+
+.intro-text p {
+  font-size: 1rem;
+  color: #666;
+  max-width: 400px;
+  animation: popIn 1s ease-out forwards;
+}
+
 .hero {
   height: 250vh; /* enough scroll space for blooming effect */
   display: flex;
@@ -78,20 +119,6 @@ h2 {
   .active .petal4 {
     transform: translate(0, 50%) scale(0.9);
   }
-}
-
-/* Cards */
-.cards-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.cards-container .card {
-  opacity: 0;
-  transform: scale(0.8);
-  animation: popIn 0.8s ease-out forwards;
-  animation-delay: 0.3s; /* optional: stagger cards */
 }
 
 @keyframes popIn {
