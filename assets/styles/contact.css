@@ -1,9 +1,16 @@
+.contactMe-text {
+  text-align: center;
+  margin-top: 20vh;
+  color: #333;
+  animation: popIn 1s ease-out forwards;
+}
+
 .LI-profile-badge {
   transform: scale(0.9);
   transform-origin: top center;
   width: 100%;
-  animation: popIn 0.5s ease-in-out;
-  margin-top: 15vh;
+  animation: popIn 1s ease-out forwards;
+  margin-top: 5vh;
 }
 @media (max-width: 480px) {
   .LI-profile-badge {
@@ -11,6 +18,30 @@
   }
 }
 
+/* Icon styling */
+.contact-icon {
+  width: 12vw;
+  max-width: 50px;
+  object-fit: contain;
+  animation: popIn 1s ease-out forwards;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .contact-icon {
+    width: 14vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-icon {
+    width: 20vw;
+    margin: 5px 10px;
+  }
+}
 @keyframes popIn {
   0% {
     opacity: 0;
