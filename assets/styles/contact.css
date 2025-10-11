@@ -26,6 +26,8 @@
   max-width: 50px;
   object-fit: contain;
   animation: popIn 1s ease-out forwards;
+  margin-top: 5vh;
+  margin-left: 5vh;
 }
 
 .contact-icon:hover {
