@@ -3,7 +3,7 @@
   margin-top: 20vh;
   color: #333;
   animation: popIn 1s ease-out forwards;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   font-weight: 800;
 }
 
@@ -22,7 +22,7 @@
 
 /* Icon styling */
 .contact-icon {
-  width: 12vw;
+  width: 10vw;
   max-width: 50px;
   object-fit: contain;
   animation: popIn 1s ease-out forwards;
