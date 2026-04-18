@@ -200,3 +200,111 @@
 .fc-wrap:nth-child(4) {
   animation-delay: 0.38s;
 }
+
+/* Ticker wrapper */
+#awards-ticker {
+  overflow: hidden;
+  position: relative;
+  /* Fade top & bottom edges */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 18%,
+    black 82%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 18%,
+    black 82%,
+    transparent 100%
+  );
+}
+
+#Awardscontainer {
+  margin-top: 3vh;
+  margin-bottom: 10vh;
+  border: #1e3a5f 5px solid;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+/* Scrolling track */
+.ticker-track {
+  display: flex;
+  flex-direction: column;
+  animation: ticker-scroll linear infinite;
+  animation-duration: var(--ticker-duration, 18s);
+  will-change: transform;
+}
+
+/* Pause on hover */
+#awards-ticker:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Individual award item */
+.ticker-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-left: 2px solid transparent;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+  border-radius: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+.ticker-item:hover {
+  border-left-color: #1e3a5f;
+  background: rgba(30, 58, 95, 0.04);
+}
+
+.ticker-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ticker-award {
+  font-size: 1rem;
+  color: #1a1a2e;
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+
+.ticker-org {
+  font-size: 0.75rem;
+  color: #888;
+  letter-spacing: 0.03em;
+}
+
+.ticker-year {
+  font-size: 0.7rem;
+  color: #bbb;
+  margin-left: auto;
+  flex-shrink: 0;
+  padding-top: 3px;
+}
+
+/* Section label */
+.ticker-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 0.75rem;
+}

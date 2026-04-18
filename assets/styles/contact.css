@@ -98,16 +98,26 @@
   font-size: 0.75rem;
   padding: 2px 12px;
   border-radius: 999px;
+  margin-right: 10px;
 }
 
 .gb-like-btn.liked {
   background-color: #e8f0fe;
-  border-color: #6ea8fe;
-  color: #0d6efd;
+  border-color: #1e3a5f;
+  color: #1e3a5f;
+}
+
+.gb-like-btn:not(.liked):hover {
+  background-color: #1e3a5f;
 }
 
 .gb-timestamp {
   font-size: 0.72rem;
+}
+
+#gb-submit {
+  background-color: #1e3a5f;
+  border-color: #1e3a5f;
 }
 
 .gb-realtime-dot {
