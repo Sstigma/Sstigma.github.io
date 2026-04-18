@@ -50,24 +50,46 @@ function renderEntry(entry, prepend = false) {
     "card border-0 shadow-sm mb-3 gb-entry" + (prepend ? " gb-new" : "");
   card.id = `gb-entry-${entry.id}`;
   card.innerHTML = `
-    <div class="card-body p-3 d-flex gap-3">
-      <div class="gb-avatar" style="${avatarStyle(entry.name)}">${initials(entry.name)}</div>
-      <div class="flex-grow-1">
-        <div class="d-flex align-items-baseline gap-2 mb-1">
-          <span class="fw-semibold" style="font-size:.9rem">&ensp;${esc(entry.name)}</span>
-          &ensp;${entry.location ? `<span class="text-muted" style="font-size:.78rem">${esc(entry.location)}</span>` : ""}
-          <span class="text-muted ms-auto gb-timestamp">&ensp;${timeAgo(entry.created_at)}</span>
-        </div>
-        <p class="mb-2 text-secondary" style="font-size:.875rem;line-height:1.6">&ensp;${esc(entry.message)}</p>
-        <div class="d-flex align-items-center gap-2">
-          <button class="btn btn-outline-secondary btn-sm gb-like-btn ${liked ? "liked" : ""}"
-            onclick="toggleLike(${entry.id}, this)">
-            ${liked ? "♥ liked ${entry.likes}" : "♡ like "}
-          </button>
-          <span class="text-muted" style="font-size:.75rem" id="gb-likes-${entry.id}">${entry.likes}</span>
-        </div>
+<div class="card-body p-3 d-flex gap-3">
+  <div class="gb-avatar" style="${avatarStyle(entry.name)}">${initials(entry.name)}</div>
+  <div class="flex-grow-1">
+    
+<div class="d-flex justify-content-between align-items-start mb-1">
+  
+  <div>
+    <span class="fw-semibold" style="font-size:.9rem">
+      &nbsp;${esc(entry.name)}
+    </span>
+    ${
+      entry.location
+        ? `
+      <div class="text-muted" style="font-size:.78rem">
+        &nbsp;${esc(entry.location)}
       </div>
-    </div>`;
+    `
+        : ""
+    }
+  </div>
+  <span class="text-muted gb-timestamp" style="font-size:.75rem">
+    ${timeAgo(entry.created_at)}
+  </span>
+</div>
+    <p class="mb-2 text-secondary" style="font-size:.875rem;line-height:1.6">
+      ${esc(entry.message)}
+    </p>
+
+    <div class="d-flex align-items-center gap-2">
+      <button class="btn btn-outline-secondary btn-sm gb-like-btn ${liked ? "liked" : ""}"
+        onclick="toggleLike(${entry.id}, this)">
+        ${liked ? `♥ liked ${entry.likes}` : "♡ like"}
+      </button>
+      <span class="text-muted" style="font-size:.75rem" id="gb-likes-${entry.id}">
+        ${entry.likes}
+      </span>
+    </div>
+
+  </div>
+</div>`;
   return card;
 }
 

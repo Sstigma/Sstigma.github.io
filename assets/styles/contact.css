@@ -68,6 +68,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  margin-right: 0.5rem;
 }
 
 .gb-entry {
@@ -97,6 +98,7 @@
   padding: 2px 12px;
   border-radius: 999px;
 }
+
 .gb-like-btn.liked {
   background-color: #e8f0fe;
   border-color: #6ea8fe;
