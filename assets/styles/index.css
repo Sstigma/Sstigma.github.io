@@ -181,37 +181,82 @@
 }
 
 /* Fade + slide up (text elements) */
-.sa {
+.sr {
   opacity: 0;
-  transform: translateY(44px);
+  -webkit-transform: translateY(40px);
+  transform: translateY(40px);
+  -webkit-transition:
+    opacity 0.75s ease,
+    -webkit-transform 0.75s ease;
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+  will-change: opacity, transform;
 }
-.sa.before-enter {
-  opacity: 0;
-  transform: translateY(44px);
-}
-.sa.visible {
+.sr.in {
   opacity: 1;
+  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
-.sa.after-leave {
+.sr.out {
   opacity: 0;
-  transform: translateY(-36px);
+  -webkit-transform: translateY(-32px);
+  transform: translateY(-32px);
+  -webkit-transition:
+    opacity 0.45s ease,
+    -webkit-transform 0.45s ease;
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
 }
 
 /* Scale in (stat pills) */
-.sa-scale {
+.sr-scale {
   opacity: 0;
-  transform: scale(0.92) translateY(24px);
+  -webkit-transform: scale(0.88);
+  transform: scale(0.88);
+  -webkit-transition:
+    opacity 0.65s ease,
+    -webkit-transform 0.65s ease;
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+  will-change: opacity, transform;
 }
-.sa-scale.before-enter {
-  opacity: 0;
-  transform: scale(0.92) translateY(24px);
-}
-.sa-scale.visible {
+.sr-scale.in {
   opacity: 1;
-  transform: scale(1) translateY(0);
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
-.sa-scale.after-leave {
+.sr-scale.out {
   opacity: 0;
-  transform: scale(0.94) translateY(-20px);
+  -webkit-transform: scale(0.92);
+  transform: scale(0.92);
+  -webkit-transition:
+    opacity 0.4s ease,
+    -webkit-transform 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.d1 {
+  -webkit-transition-delay: 0.08s;
+  transition-delay: 0.08s;
+}
+.d2 {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.d3 {
+  -webkit-transition-delay: 0.34s;
+  transition-delay: 0.34s;
+}
+.d4 {
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+.d5 {
+  -webkit-transition-delay: 0.65s;
+  transition-delay: 0.65s;
 }

@@ -8,77 +8,90 @@ window.addEventListener("scroll", function () {
   }
 });
 
-(function () {
-  var EASING = "cubic-bezier(0.22, 0.61, 0.36, 1)";
-  var DURATION_IN = "0.75s";
-  var DURATION_OUT = "0.5s";
+document.addEventListener("DOMContentLoaded", function () {
+  "use strict";
 
-  var selectors = ".sa, .sa-right, .sa-scale";
-  var targets = document.querySelectorAll(selectors);
+  var DELAY_CLASSES = ["d1", "d2", "d3", "d4", "d5"];
 
-  if (!("IntersectionObserver" in window)) {
-    targets.forEach(function (el) {
-      el.style.opacity = "1";
-      el.style.transform = "none";
-    });
+  /* Grab ALL animated elements — sr, sr-right, sr-scale */
+  var targets = document.querySelectorAll(".sr, .sr-right, .sr-scale");
+
+  /* Hard fallback: if no elements found, bail early*/
+  if (!targets || targets.length === 0) {
     return;
   }
 
-  targets.forEach(function (el) {
-    var delay = el.getAttribute("data-delay") || "0";
-    el._inDelay = parseInt(delay, 10);
-    setTransition(el, DURATION_IN, el._inDelay);
-  });
-
-  function setTransition(el, duration, delayMs) {
-    el.style.transition =
-      "opacity " +
-      duration +
-      " " +
-      EASING +
-      " " +
-      delayMs +
-      "ms, " +
-      "transform " +
-      duration +
-      " " +
-      EASING +
-      " " +
-      delayMs +
-      "ms";
+  /* Fallback for old browsers */
+  if (!("IntersectionObserver" in window)) {
+    for (var i = 0; i < targets.length; i++) {
+      targets[i].classList.add("in");
+    }
+    return;
   }
 
+  /* Strip stagger delays before exit */
+  function disableDelays(el) {
+    for (var i = 0; i < DELAY_CLASSES.length; i++) {
+      if (el.classList.contains(DELAY_CLASSES[i])) {
+        el.setAttribute("data-delay-cls", DELAY_CLASSES[i]);
+        el.style.transitionDelay = "0s";
+        el.style.webkitTransitionDelay = "0s";
+        break;
+      }
+    }
+  }
+
+  /* Restore stagger delays after exit finishes */
+  function restoreDelays(el) {
+    if (el.getAttribute("data-delay-cls")) {
+      el.style.transitionDelay = "";
+      el.style.webkitTransitionDelay = "";
+    }
+  }
+
+  /* Main IntersectionObserver */
   var observer = new IntersectionObserver(
     function (entries) {
-      entries.forEach(function (entry) {
+      for (var i = 0; i < entries.length; i++) {
+        var entry = entries[i];
         var el = entry.target;
 
         if (entry.isIntersecting) {
-          setTransition(el, DURATION_IN, el._inDelay);
-          el.classList.remove("before-enter", "after-leave");
-          el.classList.add("visible");
+          /* ENTERING viewport */
+          el.classList.remove("out");
+          restoreDelays(el);
+          (function (element) {
+            requestAnimationFrame(function () {
+              requestAnimationFrame(function () {
+                element.classList.add("in");
+              });
+            });
+          })(el);
         } else {
-          setTransition(el, DURATION_OUT, 0);
-          el.classList.remove("visible");
+          /* LEAVING viewport */
+          if (el.classList.contains("in")) {
+            el.classList.remove("in");
+            disableDelays(el);
+            el.classList.add("out");
 
-          var rect = entry.boundingClientRect;
-          if (rect.top < 0) {
-            el.classList.remove("before-enter");
-            el.classList.add("after-leave");
-          } else {
-            el.classList.remove("after-leave");
-            el.classList.add("before-enter");
+            /* Restore delays after exit transition completes */
+            (function (element) {
+              setTimeout(function () {
+                restoreDelays(element);
+              }, 500);
+            })(el);
           }
         }
-      });
+      }
     },
     {
-      threshold: 0.08,
-      rootMargin: "0px 0px -60px 0px",
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
     },
   );
 
-  targets.forEach(function (el) {
-    observer.observe(el);
-  });
-})();
+  /* Observe every target element */
+  for (var j = 0; j < targets.length; j++) {
+    observer.observe(targets[j]);
+  }
+});
