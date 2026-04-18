@@ -1,8 +1,14 @@
 /* Flip card core */
-.fc-wrap {
+.fc-section {
   perspective: 1200px;
+  -webkit-perspective: 1200px;
+}
+
+.fc-wrap {
   height: 450px;
   cursor: pointer;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 
 .fc-grid {
@@ -32,6 +38,7 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   border-radius: 1rem;
+  overflow: hidden;
 }
 
 /* Front face */
@@ -64,6 +71,7 @@
   padding: 3px 10px;
   border-radius: 999px;
   margin-bottom: 0.75rem;
+  align-self: flex-start;
 }
 .fc-work .fc-badge {
   background: rgba(99, 179, 237, 0.18);
@@ -104,13 +112,16 @@
   line-height: 1.6;
   margin-top: 0.6rem;
   display: -webkit-box;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .fc-hint {
   font-size: 0.65rem;
   color: rgba(255, 255, 255, 0.3);
-  margin-top: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
   letter-spacing: 0.05em;
 }
 
@@ -125,6 +136,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0.92;
+  display: block;
 }
 
 .fc-back-overlay {
@@ -149,16 +161,8 @@
   text-transform: uppercase;
   color: #555;
   margin-bottom: 1rem;
-  align-items: center;
-  gap: 0.75rem;
   margin-top: 10vh;
   text-align: center;
-}
-.fc-section-title::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: #ddd;
 }
 
 /* Animation for the page*/
@@ -173,22 +177,26 @@
   }
 }
 
-.fc-wrap,
 .fc-section-title {
-  animation: popIn 0.6s ease-out forwards;
-  opacity: 0; /* start hidden */
+  animation: popIn 0.5s ease-out 0.05s forwards;
+  opacity: 0;
 }
 
-/* Stagger each card */
+.fc-wrap {
+  animation: popIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Stagger — these now correctly target .fc-wrap only */
 .fc-wrap:nth-child(1) {
-  animation-delay: 0.05s;
+  animation-delay: 0.08s;
 }
 .fc-wrap:nth-child(2) {
-  animation-delay: 0.15s;
+  animation-delay: 0.18s;
 }
 .fc-wrap:nth-child(3) {
-  animation-delay: 0.25s;
+  animation-delay: 0.28s;
 }
 .fc-wrap:nth-child(4) {
-  animation-delay: 0.35s;
+  animation-delay: 0.38s;
 }
