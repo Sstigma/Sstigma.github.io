@@ -26,7 +26,7 @@
 .intro-text h2 {
   font-size: 1.3rem;
   margin-bottom: 8px;
-  color: #333;
+  color: #1a5276;
   animation: popIn 1s ease-out forwards;
   text-align: center;
   font-weight: 800;
@@ -36,7 +36,6 @@
   font-size: 1rem;
   color: #666;
   max-width: 400px;
-  animation: popIn 1s ease-out forwards;
 }
 
 /* Arrow Base Style */
@@ -106,4 +105,113 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* Story section */
+#story {
+  align-content: center;
+  padding: 120px 0;
+  margin-top: 20vh;
+}
+
+.story-section-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #1e3a5f;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.story-heading {
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  line-height: 1.15;
+  color: #1a5276;
+  margin-bottom: 0;
+}
+
+.story-divider {
+  width: 40px;
+  height: 2px;
+  background: #1b2838;
+  margin: 1.5rem 0;
+}
+
+.story-text {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #1e3a5f;
+  font-weight: 300;
+}
+.story-text strong {
+  color: #1a5276;
+  font-weight: 500;
+}
+
+/*  Stat pills  */
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+.stat-pill {
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  background: #7fa6d6;
+  transition:
+    border-color 0.25s,
+    background 0.25s;
+}
+.stat-pill:hover {
+  border-color: #1e3a5f;
+  background: rgba(201, 169, 110, 0.04);
+}
+.stat-number {
+  font-size: 1.9rem;
+  color: #1e3a5f;
+  line-height: 1;
+}
+.stat-desc {
+  font-size: 0.72rem;
+  color: #1e3a5f;
+  margin-top: 5px;
+  letter-spacing: 0.04em;
+}
+
+/* Fade + slide up (text elements) */
+.sa {
+  opacity: 0;
+  transform: translateY(44px);
+}
+.sa.before-enter {
+  opacity: 0;
+  transform: translateY(44px);
+}
+.sa.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.sa.after-leave {
+  opacity: 0;
+  transform: translateY(-36px);
+}
+
+/* Scale in (stat pills) */
+.sa-scale {
+  opacity: 0;
+  transform: scale(0.92) translateY(24px);
+}
+.sa-scale.before-enter {
+  opacity: 0;
+  transform: scale(0.92) translateY(24px);
+}
+.sa-scale.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+.sa-scale.after-leave {
+  opacity: 0;
+  transform: scale(0.94) translateY(-20px);
 }
