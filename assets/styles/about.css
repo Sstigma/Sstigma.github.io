@@ -1,0 +1,195 @@
+/* Flip card core */
+.fc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.fc-wrap {
+  perspective: 1200px;
+  height: 450px;
+  cursor: pointer;
+}
+
+.fc-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+  border-radius: 1rem;
+}
+
+.fc-wrap.flipped .fc-inner {
+  transform: rotateY(180deg);
+}
+
+.fc-front,
+.fc-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Front face */
+.fc-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.fc-front.fc-work {
+  background: linear-gradient(145deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  justify-content: flex-start;
+}
+
+.fc-front.fc-edu {
+  background: linear-gradient(145deg, #1b2838 0%, #1e3a5f 60%, #1a5276 100%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  justify-content: flex-start;
+}
+
+.fc-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+.fc-work .fc-badge {
+  background: rgba(99, 179, 237, 0.18);
+  color: #90cdf4;
+}
+.fc-edu .fc-badge {
+  background: rgba(154, 230, 180, 0.18);
+  color: #9ae6b4;
+}
+
+.fc-logo {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.fc-company {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+  color: #fff;
+}
+
+.fc-role {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.fc-period {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.fc-desc {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  margin-top: 0.6rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.fc-hint {
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+/* Back face */
+.fc-back {
+  transform: rotateY(180deg);
+  background: #0d0d0d;
+}
+
+.fc-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.92;
+}
+
+.fc-back-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, transparent 50%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+}
+
+.fc-back-label {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.05em;
+}
+
+/* Section headings */
+.fc-section-title {
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 1rem;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 10vh;
+  text-align: center;
+}
+.fc-section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+/* Animation for the page*/
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fc-wrap,
+.fc-section-title {
+  animation: popIn 0.6s ease-out forwards;
+  opacity: 0; /* start hidden */
+}
+
+/* Stagger each card */
+.fc-wrap:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.fc-wrap:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.fc-wrap:nth-child(3) {
+  animation-delay: 0.25s;
+}
+.fc-wrap:nth-child(4) {
+  animation-delay: 0.35s;
+}

@@ -51,6 +51,7 @@
 .py-5 {
   margin-top: 5vh;
   margin-bottom: 10vh;
+  animation: popIn 1s ease-out forwards;
 }
 
 :root {
