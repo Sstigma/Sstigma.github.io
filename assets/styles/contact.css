@@ -46,6 +46,89 @@
     margin: 5px 10px;
   }
 }
+
+/* Guestbook styling */
+.py-5 {
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+
+:root {
+  --gb-avatar-size: 40px;
+  --gb-radius: 0.75rem;
+}
+
+.gb-avatar {
+  width: var(--gb-avatar-size);
+  height: var(--gb-avatar-size);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.gb-entry {
+  border-radius: var(--gb-radius);
+  transition: box-shadow 0.15s;
+}
+.gb-entry:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+}
+
+.gb-entry.gb-new {
+  animation: gb-pop 0.35s ease;
+}
+@keyframes gb-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gb-like-btn {
+  font-size: 0.75rem;
+  padding: 2px 12px;
+  border-radius: 999px;
+}
+.gb-like-btn.liked {
+  background-color: #e8f0fe;
+  border-color: #6ea8fe;
+  color: #0d6efd;
+}
+
+.gb-timestamp {
+  font-size: 0.72rem;
+}
+
+.gb-realtime-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #198754;
+  animation: gb-pulse 2s infinite;
+  display: inline-block;
+}
+@keyframes gb-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+#gb-char-count {
+  font-size: 0.75rem;
+}
+
 @keyframes popIn {
   0% {
     opacity: 0;
