@@ -72,7 +72,11 @@
 
 /* Bouncing Animation */
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0) rotate(-45deg);
   }
   40% {
@@ -85,81 +89,11 @@
 
 /* Fade In Animation */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.hero {
-  height: 250vh; /* enough scroll space for blooming effect */
-  display: flex;
-  position: relative;
-  justify-content: center;
-  margin-top: 60%;
-}
-
-.image-container {
-  position: sticky;
-  top: 50%; /* vertical center of hero section */
-  left: 50%; /* horizontal center */
-  transform: translate(-50%, -50%); /* center perfectly */
-  width: 30vw; /* responsive scaling */
-  height: 30vw;
-  max-width: 200px; /* cap size on large screens */
-  max-height: 200px;
-}
-
-.image-container img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.6s ease, opacity 0.6s ease;
-}
-
-.petal {
-  opacity: 0;
-  transform: scale(0.5);
-}
-
-/* Bloom (relative to container size) */
-.active .petal1 {
-  transform: translate(-60%, 0) scale(1);
-  opacity: 1;
-}
-.active .petal2 {
-  transform: translate(60%, 0) scale(1);
-  opacity: 1;
-}
-.active .petal3 {
-  transform: translate(0, -60%) scale(1);
-  opacity: 1;
-}
-.active .petal4 {
-  transform: translate(0, 60%) scale(1);
-  opacity: 1;
-}
-
-/* 🔽 Small screens: shrink container + keep petals closer */
-@media (max-width: 576px) {
-  .image-container {
-    width: 40vw;
-    height: 40vw;
-    max-width: 150px;
-    max-height: 150px;
+  from {
+    opacity: 0;
   }
-
-  .active .petal1 {
-    transform: translate(-50%, 0) scale(0.9);
-  }
-  .active .petal2 {
-    transform: translate(50%, 0) scale(0.9);
-  }
-  .active .petal3 {
-    transform: translate(0, -50%) scale(0.9);
-  }
-  .active .petal4 {
-    transform: translate(0, 50%) scale(0.9);
+  to {
+    opacity: 1;
   }
 }
 
