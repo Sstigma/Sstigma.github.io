@@ -18,13 +18,14 @@ body {
   background: ghostwhite;
   color: black;
   padding-top: 2rem;
-  transition: transform 1.75s ease, opacity 0.75s ease;
+  transition:
+    transform 1.75s ease,
+    opacity 0.75s ease;
   z-index: 1000;
 }
 
 .navbar-collapse {
   padding-top: 10px;
-  
 }
 
 .navbar nav {
