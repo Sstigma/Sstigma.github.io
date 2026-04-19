@@ -120,6 +120,102 @@
       </div>
     </section>
 
+    <section id="hobbies">
+      <div class="container" id="hoobiesContainer">
+        <span class="hobbies-label sr d1">Beyond the code</span>
+        <h2 class="hobbies-heading sr d2">What I do for fun.</h2>
+        <div class="hobbies-divider sr d2"></div>
+
+        <div class="hobby-grid">
+          <div
+            class="hobby-card sr d1"
+            data-hobby="0"
+            role="button"
+            tabindex="0"
+            aria-label="Learn more about Collecting Licences"
+          >
+            <span class="hobby-card-hint">tap to read more</span>
+            <div class="hobby-icon-wrap">
+              <span class="hobby-icon">📋</span>
+            </div>
+            <div class="hobby-name">Collecting Licences</div>
+            <p class="hobby-sub">Always chasing the next qualification</p>
+          </div>
+
+          <div
+            class="hobby-card sr d2"
+            data-hobby="1"
+            role="button"
+            tabindex="0"
+            aria-label="Learn more about Running"
+          >
+            <span class="hobby-card-hint">tap to read more</span>
+            <div class="hobby-icon-wrap">
+              <span class="hobby-icon">🏃</span>
+            </div>
+            <div class="hobby-name">Running</div>
+            <p class="hobby-sub">Early mornings, clear head</p>
+          </div>
+
+          <div
+            class="hobby-card sr d3"
+            data-hobby="2"
+            role="button"
+            tabindex="0"
+            aria-label="Learn more about Gymming"
+          >
+            <span class="hobby-card-hint">tap to read more</span>
+            <div class="hobby-icon-wrap">
+              <span class="hobby-icon">🏋️</span>
+            </div>
+            <div class="hobby-name">Gymming</div>
+            <p class="hobby-sub">Discipline outside the office</p>
+          </div>
+
+          <div
+            class="hobby-card sr d4"
+            data-hobby="3"
+            role="button"
+            tabindex="0"
+            aria-label="Learn more about Gaming"
+          >
+            <span class="hobby-card-hint">tap to read more</span>
+            <div class="hobby-icon-wrap">
+              <span class="hobby-icon">🎮</span>
+            </div>
+            <div class="hobby-name">Gaming</div>
+            <p class="hobby-sub">Strategy &amp; RPG on weekends</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="hobby-modal-overlay"
+      id="hobbyModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="hobbyModalTitle"
+    >
+      <div class="hobby-modal" id="hobbyModalBox">
+        <button
+          class="hobby-modal-close"
+          id="hobbyModalClose"
+          aria-label="Close"
+        >
+          &times;
+        </button>
+        <div class="hobby-modal-icon-wrap">
+          <span class="hobby-modal-icon" id="hobbyModalIcon"></span>
+        </div>
+        <div class="hobby-modal-title" id="hobbyModalTitle"></div>
+        <div class="hobby-modal-sub" id="hobbyModalSub"></div>
+        <div class="hobby-modal-divider"></div>
+        <div class="hobby-modal-body" id="hobbyModalBody"></div>
+        <div class="hobby-modal-tags" id="hobbyModalTags"></div>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="/assets/styles/navbar.js"></script>
     <script src="/assets/styles/index.js"></script>
