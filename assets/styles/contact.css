@@ -1,7 +1,7 @@
 .contactMe-text h2 {
   text-align: center;
   margin-top: 20vh;
-  color: #333;
+  color: #1a5276;
   animation: popIn 1s ease-out forwards;
   font-size: 1.3rem;
   font-weight: 800;
@@ -18,6 +18,10 @@
   .LI-profile-badge {
     transform: scale(0.8);
   }
+}
+
+#leaveMessagetxt {
+  color: #1a5276;
 }
 
 /* Icon styling */
