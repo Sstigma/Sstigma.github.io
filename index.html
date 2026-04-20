@@ -120,9 +120,114 @@
       </div>
     </section>
 
+    <section id="volunteer">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- LEFT — Story text -->
+          <div class="col-lg-6 sr-left">
+            <span class="volunteer-label sr d1">Beyond the screen</span>
+            <h2 class="volunteer-heading sr d2">Inspiring next generation</h2>
+            <div class="volunteer-divider sr d2"></div>
+
+            <!-- ↓ EDIT YOUR STORY TEXT HERE -->
+            <p class="volunteer-story sr d3">
+              Life beyond the screen has shaped me just as much as any codebase.
+              As an NPCC Senior Cadet Inspector, I strive to inspire the next
+              generation to uphold positive values such as discipline,
+              resilience, and integrity. Guiding cadets and leading by example
+              reminds me that impact goes beyond technical skills, it’s about
+              shaping people and building character.
+            </p>
+            <p class="volunteer-story sr d4">
+              Every photo in this collection captures a version of me that code
+              alone can't describe.
+              <strong>This is who I am when the laptop closes.</strong>
+            </p>
+          </div>
+
+          <!-- RIGHT — Slideshow -->
+          <div class="col-lg-5 offset-lg-1 sr-right sr d1">
+            <div class="slideshow-wrap" id="slideshow" title="Click to enlarge">
+              <div class="slideshow-ratio">
+                <!-- ↓ REPLACE src paths with your real images -->
+                <!-- Slide 1 -->
+                <div class="slide active" data-index="0">
+                  <img src="/assets/images/Npcc1.jpg" alt="Photo 1" />
+                  <div class="slide-caption">
+                    <span class="slide-caption-text"
+                      >National Police Cadet Corps Annual Parade 2023</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide" data-index="1">
+                  <img src="/assets/images/Npcc2.jpg" alt="Photo 2" />
+                  <div class="slide-caption">
+                    <span class="slide-caption-text"
+                      >Home Team Festival 2023</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide" data-index="2">
+                  <img src="/assets/images/Npcc3.jpg" alt="Photo 3" />
+                  <div class="slide-caption">
+                    <span class="slide-caption-text"
+                      >National Police Cadet Corps Annual Parade 2023</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Prev / Next -->
+                <button
+                  class="slide-btn slide-btn-prev"
+                  id="slidePrev"
+                  aria-label="Previous photo"
+                >
+                  &#8249;
+                </button>
+                <button
+                  class="slide-btn slide-btn-next"
+                  id="slideNext"
+                  aria-label="Next photo"
+                >
+                  &#8250;
+                </button>
+              </div>
+              <!-- /slideshow-ratio -->
+
+              <!-- Dots -->
+              <div class="slide-dots" id="slideDots">
+                <button
+                  class="slide-dot active"
+                  data-dot="0"
+                  aria-label="Go to slide 1"
+                ></button>
+                <button
+                  class="slide-dot"
+                  data-dot="1"
+                  aria-label="Go to slide 2"
+                ></button>
+                <button
+                  class="slide-dot"
+                  data-dot="2"
+                  aria-label="Go to slide 3"
+                ></button>
+              </div>
+
+              <div class="slide-counter" id="slideCounter">1 / 3</div>
+            </div>
+            <!-- /slideshow-wrap -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="hobbies">
       <div class="container" id="hoobiesContainer">
-        <span class="hobbies-label sr d1">Beyond the code</span>
+        <span class="hobbies-label sr d1">Rewind & Relax</span>
         <h2 class="hobbies-heading sr d2">What I do for fun.</h2>
         <div class="hobbies-divider sr d2"></div>
 
@@ -154,7 +259,7 @@
               <span class="hobby-icon">🏃</span>
             </div>
             <div class="hobby-name">Running</div>
-            <p class="hobby-sub">Early mornings, clear head</p>
+            <p class="hobby-sub">Clocking miles, clearing my mind</p>
           </div>
 
           <div
@@ -218,6 +323,7 @@
 
     <!-- Scripts -->
     <script src="/assets/styles/navbar.js"></script>
+    <script src="/assets/functionalities/slideShow.js"></script>
     <script src="/assets/styles/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
