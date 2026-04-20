@@ -1,3 +1,5 @@
+// Ticker for about page awards section
+
 const AWARDS = [
   {
     icon: "🏆",
