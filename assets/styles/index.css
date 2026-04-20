@@ -1,5 +1,9 @@
 /* Header Image + Text */
 
+body {
+  padding-bottom: 25vh;
+}
+
 .header-image-container {
   display: flex;
   justify-content: center;
