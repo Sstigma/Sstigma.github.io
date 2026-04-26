@@ -25,7 +25,6 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
@@ -99,7 +98,6 @@
     <!-- Guestbook -->
     <section class="py-5">
       <div class="container" style="max-width: 720px">
-        <!-- Header -->
         <div class="d-flex align-items-center justify-content-between mb-4">
           <div>
             <h2 class="mb-0 fw-semibold" id="leaveMessagetxt">
@@ -110,7 +108,16 @@
               Live &mdash; messages appear in real time
             </p>
           </div>
-          <span class="badge bg-secondary" id="gb-count">Loading…</span>
+          <div class="d-flex align-items-center" style="gap: 0.5rem">
+            <span class="badge bg-secondary" id="gb-count">Loading…</span>
+            <button
+              class="gb-admin-btn"
+              id="gb-admin-btn"
+              onclick="toggleAdmin()"
+            >
+              Admin
+            </button>
+          </div>
         </div>
 
         <!-- Form -->
@@ -161,28 +168,70 @@
             Loading messages…
           </div>
         </div>
+
+        <div
+          class="text-center mt-2 mb-3"
+          id="gb-show-more-wrap"
+          style="display: none"
+        >
+          <button
+            class="btn btn-outline-secondary btn-sm px-4"
+            style="border-radius: 999px; font-size: 0.8rem"
+            onclick="showAllEntries()"
+            id="gb-show-more-btn"
+          >
+            Show all messages ↓
+          </button>
+        </div>
       </div>
     </section>
 
     <!-- Toast -->
     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
-      <div
-        id="gb-toast"
-        class="toast align-items-center text-bg-success border-0"
-        role="alert"
-      >
+      <div id="gb-toast" class="toast align-items-center border-0" role="alert">
         <div class="d-flex">
-          <div class="toast-body">Message posted!</div>
+          <div class="toast-body" id="gb-toast-body">Message posted!</div>
           <button
             type="button"
-            class="btn-close btn-close-white me-2 m-auto"
+            class="btn-close me-2 m-auto"
             data-bs-dismiss="toast"
           ></button>
         </div>
       </div>
     </div>
 
-    <!-- Scripts -->
+    <div class="gb-login-overlay" id="gb-login-overlay">
+      <div class="gb-login-modal">
+        <button class="gb-login-close" onclick="closeLoginModal()">
+          &times;
+        </button>
+        <div class="gb-login-title">Admin Login</div>
+        <div class="gb-login-sub">Sign in as admin</div>
+        <input
+          class="gb-login-input"
+          type="email"
+          id="gb-email"
+          placeholder="Email"
+        />
+        <input
+          class="gb-login-input"
+          type="password"
+          id="gb-password"
+          placeholder="Password"
+        />
+        <button
+          class="gb-login-submit"
+          id="gb-login-submit"
+          onclick="doLogin()"
+        >
+          Sign in
+        </button>
+        <div class="gb-login-error" id="gb-login-error">
+          Incorrect email or password.
+        </div>
+      </div>
+    </div>
+
     <script src="/assets/styles/navbar.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -191,5 +240,3 @@
     <script src="/assets/functionalities/guestBook.js"></script>
   </body>
 </html>
-
-<!-- Icons by https://www.flaticon.com/packs/social-media-86 and https://www.flaticon.com/packs/user-interface-214 -->
