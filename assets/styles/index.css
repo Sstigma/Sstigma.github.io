@@ -55,7 +55,7 @@ body {
 .arrow {
   width: 15px;
   height: 15px;
-  border-left: 3px solid black; /* Bootstrap blue */
+  border-left: 3px solid black; 
   border-bottom: 3px solid black;
   transform: rotate(-45deg);
   margin: 3px;
@@ -293,7 +293,6 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   background: #1a1a2e;
-  /* Force GPU layer — prevents flicker on GitHub Pages CDN */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
@@ -694,7 +693,6 @@ body {
     opacity 0.3s ease;
   opacity: 0;
   box-shadow: 0 20px 60px rgba(15, 30, 55, 0.18);
-  /* Prevent scroll behind modal */
   max-height: 90vh;
   overflow-y: auto;
 }
