@@ -55,8 +55,8 @@ body {
 .arrow {
   width: 15px;
   height: 15px;
-  border-left: 3px solid black; 
-  border-bottom: 3px solid black;
+  border-left: 3px solid #1a5276;
+  border-bottom: 3px solid #1a5276;
   transform: rotate(-45deg);
   margin: 3px;
   animation: bounce 1.5s infinite;
