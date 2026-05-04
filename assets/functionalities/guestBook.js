@@ -211,7 +211,7 @@ function refreshShowMore() {
   if (hidden > 0) {
     wrap.style.display = "";
     document.getElementById("gb-show-more-btn").textContent =
-      `Show all messages (${total}) ↓`;
+      `Show remaining messages (${total - 2}) ↓`;
   } else {
     wrap.style.display = "none";
   }
