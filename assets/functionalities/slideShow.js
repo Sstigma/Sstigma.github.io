@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
-  /* ── Slideshow ──────────────────────────────── */
+  /* Slideshow */
   var slides = document.querySelectorAll(".slide");
   var dots = document.querySelectorAll(".slide-dot");
   var counter = document.getElementById("slideCounter");

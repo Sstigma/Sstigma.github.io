@@ -36,12 +36,6 @@ body {
   font-weight: 800;
 }
 
-.intro-text p {
-  font-size: 1rem;
-  color: #666;
-  max-width: 400px;
-}
-
 /* Arrow Base Style */
 #scroll-down-arrows {
   position: relative;
@@ -73,7 +67,7 @@ body {
   animation-delay: 0.3s;
 }
 
-/* Bouncing Animation */
+/* Bouncing Animation for arrows */
 @keyframes bounce {
   0%,
   20%,

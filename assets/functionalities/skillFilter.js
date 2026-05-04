@@ -1,3 +1,5 @@
+// Skill Set filter for about page
+
 document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 

@@ -44,8 +44,13 @@ const AWARDS = [
     org: "Ministry of Education, Singapore",
     year: "2023",
   },
+  {
+    icon: "🏅",
+    award: "Best Corporal for Batch 62",
+    org: "NDU, Republic of Singapore Navy",
+    year: "2026",
+  },
 ];
-// ──────────────────────────────────────────────────────────────
 
 function buildItem(a) {
   return `
@@ -65,10 +70,9 @@ const track = document.getElementById("ticker-track");
 const html = AWARDS.map(buildItem).join("");
 track.innerHTML = html + html;
 
-// Speed: ~28px per second. More items = longer duration.
 const itemHeight = 72; // approx px per item
 const totalHeight = AWARDS.length * itemHeight;
-const speed = 28; // px per second — lower = slower
+const speed = 28;
 const duration = Math.round(totalHeight / speed);
 track.style.setProperty("--ticker-duration", duration + "s");
 document

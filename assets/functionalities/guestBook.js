@@ -1,4 +1,6 @@
-// CONFIG
+//Guestbook in contact page
+
+// Config Supabase
 const SUPABASE_URL = "https://lzmkcuktaqenqpyclhby.supabase.co";
 const SUPABASE_KEY =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx6bWtjdWt0YXFlbnFweWNsaGJ5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0NTI4MjgsImV4cCI6MjA5MjAyODgyOH0.kQ5pZngoK99U_td885KX6-6BNbEBn0JFSEuIy-g30Uo";
