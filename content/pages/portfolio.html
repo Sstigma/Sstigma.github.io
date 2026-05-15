@@ -1,10 +1,122 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/assets/styles/general.css" />
+    <link rel="stylesheet" href="/assets/styles/portfolio.css" />
+    <!-- Favicon for the website -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
     <title>Portfolio</title>
-    HOME
   </head>
-  <body></body>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button
+        class="navbar-toggler ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/content/pages/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/content/pages/contact.html">Contact</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/content/pages/portfolio.html"
+              >Portfolio</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="pf-header">
+      <span class="pf-header-label">My work</span>
+      <h1 class="pf-header-heading">Projects I've built.</h1>
+      <div class="pf-header-divider"></div>
+      <p class="pf-header-sub">
+        A collection of things I've designed, engineered, and shipped.
+      </p>
+    </div>
+
+    <!-- Project list -->
+    <div class="container pf-list">
+      <!-- ════════════════════════════════════════
+           PROJECT CARD — WealthWise
+           To add more projects: duplicate this
+           entire .pf-card block and update content
+      ════════════════════════════════════════ -->
+      <a class="pf-card sr" href="/content/pages/wealthWise.html">
+        <!-- Left: project photo -->
+        <div class="pf-card-img-wrap">
+          <!-- Replace with your real screenshot -->
+          <img
+            src="/assets/images/WealthWise/WealthWise-Dashboard.png"
+            alt="WealthWise screenshot"
+            class="pf-card-img"
+            onerror="
+              this.src =
+                'https://placehold.co/600x400/1a1a2e/90cdf4?text=WealthWise'
+            "
+          />
+          <div class="pf-card-img-overlay"></div>
+        </div>
+
+        <!-- Right: project info -->
+        <div class="pf-card-body">
+          <div class="pf-card-tags">
+            <span class="pf-tag-PC">React</span>
+            <span class="pf-tag-PC">Node.js</span>
+            <span class="pf-tag-PC">Firebase</span>
+            <span class="pf-tag-PC">Full-Stack</span>
+          </div>
+          <h2 class="pf-card-title">WealthWise</h2>
+          <p class="pf-card-desc">
+            A full-stack personal finance tracker built for Singapore. Track
+            income and expenses across multiple bank accounts, monitor your
+            stock portfolio with live prices, and watch your net worth grow over
+            time — all in SGD.
+          </p>
+          <div class="pf-card-meta">
+            <span class="pf-card-meta-item">
+              <span class="pf-meta-dot"></span> React 18 · Node.js · Firebase ·
+              Vercel
+            </span>
+          </div>
+          <div class="pf-card-cta">
+            View project <span class="pf-cta-arrow">→</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/styles/navbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/assets/functionalities/portfolio.js"></script>
+  </body>
 </html>

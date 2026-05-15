@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles/general.css" />
+    <link rel="stylesheet" href="/assets/styles/portfolio.css" />
+    <title>WealthWise — Project</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button
+        class="navbar-toggler ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/content/pages/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/content/pages/contact.html">Contact</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/content/pages/portfolio.html"
+              >Portfolio</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero image -->
+    <div class="pd-hero-wrap">
+      <img
+        src="/assets/images/WealthWise/WealthWise-Default.png"
+        alt="WealthWise dashboard screenshot"
+        class="pd-hero-img"
+        onerror="
+          this.src =
+            'https://placehold.co/1200x500/1a1a2e/90cdf4?text=WealthWise'
+        "
+      />
+      <div class="pd-hero-overlay"></div>
+    </div>
+
+    <!-- Back link -->
+    <div class="container pd-back-wrap">
+      <a href="/content/pages/portfolio.html" class="pd-back">
+        ← Back to Portfolio
+      </a>
+    </div>
+
+    <!-- Project detail content -->
+    <div class="container pd-container">
+      <div class="row">
+        <!-- ── LEFT: main content ── -->
+        <div class="col-lg-8">
+          <!-- Tags -->
+          <div class="pf-card-tags pd-tags sr">
+            <span class="pf-tag">React 18</span>
+            <span class="pf-tag">Node.js</span>
+            <span class="pf-tag">Firebase</span>
+            <span class="pf-tag">Full-Stack</span>
+            <span class="pf-tag">Vercel</span>
+            <span class="pf-tag">Render</span>
+          </div>
+
+          <h1 class="pd-title sr d1">WealthWise 💰</h1>
+          <p class="pd-tagline sr d2">
+            A full-stack personal finance tracker built for Singapore.
+          </p>
+
+          <div class="pd-divider sr d2"></div>
+
+          <!-- Overview -->
+          <div class="pd-section sr d3">
+            <h3 class="pd-section-heading">Overview</h3>
+            <p class="pd-body">
+              WealthWise is a personal finance web application designed
+              specifically for Singapore users. It lets you track income and
+              expenses across multiple bank accounts — DBS, OCBC, cash, credit
+              cards — monitor your stock and ETF portfolio with live prices from
+              both SGX and US markets, and watch your net worth grow over time.
+              Everything is denominated in SGD.
+            </p>
+            <p class="pd-body">
+              The app is split into three main sections: a
+              <strong>Dashboard</strong> with a live net worth figure and trend
+              chart, a <strong>Money Flow</strong>
+              view for transactions and per-account P&amp;L, and a
+              <strong>Portfolio</strong> section with live ticker prices,
+              unrealised P&amp;L, and a 6-month performance chart.
+            </p>
+          </div>
+
+          <!-- Key Features -->
+          <div class="pd-section sr">
+            <h3 class="pd-section-heading">Key Features</h3>
+            <div class="pd-feature-list">
+              <!-- Feature 1 -->
+              <div class="pd-feature pd-feature--img">
+                <div class="pd-feature-top">
+                  <span class="pd-feature-icon">📊</span>
+                  <div>
+                    <div class="pd-feature-title">Live Net Worth Dashboard</div>
+                    <div class="pd-feature-desc">
+                      Net Worth = cumulative cash balance + live portfolio
+                      value, with a 6-month trend chart that auto-fills as you
+                      use the app via silent monthly snapshots.
+                    </div>
+                  </div>
+                </div>
+                <div class="pd-feature-img-wrap">
+                  <img
+                    src="/assets/images/WealthWise/WealthWise-Dashboard.png"
+                    alt="WealthWise dashboard screenshot"
+                    class="pd-feature-img"
+                    onerror="this.parentElement.style.display = 'none'"
+                  />
+                </div>
+              </div>
+
+              <!-- Feature 2 -->
+              <div class="pd-feature pd-feature--img">
+                <div class="pd-feature-top">
+                  <span class="pd-feature-icon">💸</span>
+                  <div>
+                    <div class="pd-feature-title">Multi-account Money Flow</div>
+                    <div class="pd-feature-desc">
+                      Track income and expenses across multiple bank accounts
+                      with per-account P&amp;L breakdowns, monthly filters, and
+                      an income-vs-expenses bar chart over 6 months.
+                    </div>
+                  </div>
+                </div>
+                <div class="pd-feature-img-wrap">
+                  <img
+                    src="/assets/images/WealthWise/WealthWise-MoneyFlow1.png"
+                    alt="WealthWise money flow screenshot"
+                    class="pd-feature-img"
+                    onerror="this.parentElement.style.display = 'none'"
+                  />
+                </div>
+              </div>
+
+              <!-- Feature 3 -->
+              <div class="pd-feature pd-feature--img">
+                <div class="pd-feature-top">
+                  <span class="pd-feature-icon">📈</span>
+                  <div>
+                    <div class="pd-feature-title">Live Stock Portfolio</div>
+                    <div class="pd-feature-desc">
+                      Add SGXand US market tickers. Live prices via
+                      Finnhub API with unrealised P&amp;L, day change, and a
+                      portfolio allocation bar showing weight per holding.
+                    </div>
+                  </div>
+                </div>
+                <div class="pd-feature-img-wrap">
+                  <img
+                    src="/assets/images/WealthWise/WealthWise-Portfolio.png"
+                    alt="WealthWise portfolio screenshot"
+                    class="pd-feature-img"
+                    onerror="this.parentElement.style.display = 'none'"
+                  />
+                </div>
+              </div>
+
+              <!-- Feature 4 -->
+              <div class="pd-feature pd-feature--img">
+                <div class="pd-feature-top">
+                  <span class="pd-feature-icon">🔐</span>
+                  <div>
+                    <div class="pd-feature-title">Secure Per-user Data</div>
+                    <div class="pd-feature-desc">
+                      Firebase Authentication + Firestore security rules ensure
+                      each user can only read and write their own data. All API
+                      endpoints require a verified Firebase ID token.
+                    </div>
+                  </div>
+                </div>
+                <div class="pd-feature-img-wrap">
+                  <img
+                    src="/assets/images/WealthWise/WealthWise-Auth.png"
+                    alt="WealthWise authentication screenshot"
+                    class="pd-feature-img"
+                    onerror="this.parentElement.style.display = 'none'"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical deep dive -->
+          <div class="pd-section sr">
+            <h3 class="pd-section-heading">How It's Built</h3>
+            <p class="pd-body">
+              The frontend is a <strong>React 18 + Vite</strong> single-page app
+              styled with <strong>TailwindCSS</strong> and charted with
+              <strong>Recharts</strong>. State is managed with
+              <strong>Zustand</strong>
+              — separate stores for auth, transactions/accounts, and
+              investments.
+            </p>
+            <p class="pd-body">
+              The backend is an <strong>Express 4</strong> REST API running on
+              <strong>Node.js 22</strong>, deployed to <strong>Render</strong>.
+              It handles all business logic, Finnhub stock price fetching (with
+              a 120ms gap between tickers to respect rate limits), and Firestore
+              writes via the Firebase Admin SDK.
+            </p>
+            <p class="pd-body">
+              The frontend is deployed to <strong>Vercel</strong>. All API calls
+              inject a Firebase ID token via Axios interceptors so the backend
+              can verify the caller server-side before touching any data.
+            </p>
+          </div>
+
+          <!-- Challenges -->
+          <div class="pd-section sr">
+            <h3 class="pd-section-heading">Challenges & Learnings</h3>
+            <p class="pd-body">
+              The trickiest part was the auto-snapshot system — on the user's
+              first dashboard visit each month, the app silently records the
+              previous month's portfolio value so the net worth history chart
+              fills in automatically without any manual input. Getting this to
+              fire exactly once per month without race conditions or duplicate
+              writes took careful Firestore document ID design using
+              <code>YYYY-MM</code> keys.
+            </p>
+            <p class="pd-body">
+              Handling SGX vs US market currency differences was also
+              non-trivial — US prices come back in USD while SGX prices are in
+              SGD, so the app needed to handle mixed-currency holdings in a
+              single portfolio view denominated in SGD.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── RIGHT: sidebar ── -->
+        <div class="col-lg-4">
+          <div class="pd-sidebar sr d2">
+            <a
+              href="https://sstigma-wealth-wise.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pd-live-btn"
+            >
+              View Live Site ↗
+            </a>
+
+            <!-- Tech stack -->
+            <div class="pd-sidebar-section">
+              <div class="pd-sidebar-label">Tech Stack</div>
+              <div class="pd-stack-list">
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">Frontend</span>
+                  <span class="pd-stack-val"
+                    >React 18, Vite, TailwindCSS, Recharts, Zustand</span
+                  >
+                </div>
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">Backend</span>
+                  <span class="pd-stack-val">Node.js 22, Express 4</span>
+                </div>
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">Auth & DB</span>
+                  <span class="pd-stack-val"
+                    >Firebase Firestore + Authentication</span
+                  >
+                </div>
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">Stock API</span>
+                  <span class="pd-stack-val">Finnhub (free tier)</span>
+                </div>
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">Hosting</span>
+                  <span class="pd-stack-val"
+                    >Vercel (frontend) · Render (backend)</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Project type -->
+            <div class="pd-sidebar-section">
+              <div class="pd-sidebar-label">Project Type</div>
+              <div class="pd-sidebar-val">Personal Project · Full-Stack</div>
+            </div>
+
+            <!-- Markets -->
+            <div class="pd-sidebar-section">
+              <div class="pd-sidebar-label">Markets Supported</div>
+              <div class="pd-sidebar-val">SGX · NYSE · NASDAQ</div>
+            </div>
+
+            <!-- Currency -->
+            <div class="pd-sidebar-section">
+              <div class="pd-sidebar-label">Base Currency</div>
+              <div class="pd-sidebar-val">SGD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /pd-container -->
+
+    <div class="pd-img-lightbox" id="pd-img-lightbox">
+      <button class="pd-img-lightbox-close" id="pd-lightbox-close">
+        &times;
+      </button>
+      <img src="" alt="" id="pd-lightbox-img" />
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/styles/navbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/assets/functionalities/portfolio.js"></script>
+  </body>
+</html>

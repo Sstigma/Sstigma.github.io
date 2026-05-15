@@ -30,7 +30,7 @@ body {
 .intro-text h2 {
   font-size: 1.3rem;
   margin-bottom: 8px;
-  color: #1a5276;
+  color: 1a5276;
   animation: popIn 1s ease-out forwards;
   text-align: center;
   font-weight: 800;
