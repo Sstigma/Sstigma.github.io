@@ -34,6 +34,7 @@ body {
   animation: popIn 1s ease-out forwards;
   text-align: center;
   font-weight: 800;
+  color: #1e3a5f;
 }
 
 /* Arrow Base Style */
@@ -49,8 +50,8 @@ body {
 .arrow {
   width: 15px;
   height: 15px;
-  border-left: 3px solid #1a5276;
-  border-bottom: 3px solid #1a5276;
+  border-left: 3px solid #1e3a5f;
+  border-bottom: 3px solid #1e3a5f;
   transform: rotate(-45deg);
   margin: 3px;
   animation: bounce 1.5s infinite;
@@ -130,7 +131,7 @@ body {
 .volunteer-heading {
   font-size: clamp(1.9rem, 3.5vw, 2.8rem);
   line-height: 1.15;
-  color: #1a5276;
+  color: #1e3a5f;
   margin-bottom: 0;
 }
 
@@ -150,7 +151,7 @@ body {
   font-weight: 300;
 }
 .story-text strong {
-  color: #1a5276;
+  color: #1e3a5f;
   font-weight: 500;
 }
 
@@ -277,7 +278,7 @@ body {
   margin-bottom: 1rem;
 }
 .volunteer-story strong {
-  color: #1a5276;
+  color: #1e3a5f;
   font-weight: 500;
 }
 
