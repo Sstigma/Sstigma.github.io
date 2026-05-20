@@ -21,6 +21,8 @@ body {
     transform 1.75s ease,
     opacity 0.75s ease;
   z-index: 1000;
+  background-color: ghostwhite;
+  opacity: 0.95;
 }
 
 .navbar-collapse {
