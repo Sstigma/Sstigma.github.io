@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/styles/general.css" />
+    <link rel="stylesheet" href="/assets/styles/portfolio.css" />
+    <title>ChatFlow — Project</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button
+        class="navbar-toggler ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/content/pages/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/content/pages/contact.html">Contact</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/content/pages/portfolio.html"
+              >Portfolio</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Back link -->
+    <div class="container pd-back-wrap">
+      <a href="/content/pages/portfolio.html" class="pd-back"
+        >← Back to Portfolio</a
+      >
+    </div>
+
+    <!-- Hero image -->
+    <div class="pd-hero-wrap">
+      <img
+        src="/assets/images/chatflow-preview.png"
+        alt="ChatFlow app screenshot"
+        class="pd-hero-img"
+        onerror="
+          this.src = 'https://placehold.co/1200x500/1a1a2e/90cdf4?text=ChatFlow'
+        "
+      />
+      <div class="pd-hero-overlay"></div>
+    </div>
+
+    <!-- Project detail content -->
+    <div class="container pd-container">
+      <div class="row">
+        <!-- ── LEFT: main content ── -->
+        <div class="col-lg-8">
+          <!-- Tags -->
+          <div class="pf-card-tags pd-tags sr">
+            <span class="pf-tag">React Native</span>
+            <span class="pf-tag">React + Vite</span>
+            <span class="pf-tag">Node.js</span>
+            <span class="pf-tag">Socket.IO</span>
+            <span class="pf-tag">Firebase</span>
+            <span class="pf-tag">Cross-Platform</span>
+          </div>
+
+          <h1 class="pd-title sr d1">ChatFlow 💬</h1>
+          <p class="pd-tagline sr d2">
+            A full-stack, cross-platform real-time messaging app built with
+            React Native, Node.js, Firebase, and WebSockets.
+          </p>
+
+          <div class="pd-divider sr d2"></div>
+
+          <!-- Overview -->
+          <div class="pd-section sr d3">
+            <h3 class="pd-section-heading">Overview</h3>
+            <p class="pd-body">
+              ChatFlow is a production-grade messaging application that runs on
+              <strong>iOS, Android, and Web</strong> from a single shared
+              codebase. It delivers real-time messaging via
+              <strong>Socket.IO WebSockets</strong>, supports media sharing up
+              to 25MB via <strong>Cloudinary</strong>, and handles
+              authentication through <strong>Firebase Auth</strong> with both
+              Email/Password and Google OAuth on all platforms.
+            </p>
+            <p class="pd-body">
+              Every user gets a
+              <strong>globally unique, permanent username</strong>
+              enforced atomically at the database level — no auto-numbering
+              fallbacks, no race conditions. The app includes real-time presence
+              indicators, typing indicators with multi-user support, read
+              receipts, an in-app image lightbox, emoji picker, and full dark
+              mode throughout.
+            </p>
+          </div>
+
+          <!-- Key Features -->
+          <div class="pd-section sr">
+            <h3 class="pd-section-heading">Key Features</h3>
+            <div class="pd-feature-list">
+              <!-- Feature 1 -->
+              <div class="pd-feature pd-feature--img">
+                <div class="pd-feature-top">
+                  <span class="pd-feature-icon">⚡</span>
+                  <div>
+                    <div class="pd-feature-title">Real-time Messaging</div>
+                    <div class="pd-feature-desc">
+                      Bi-directional WebSocket communication via Socket.IO.
+                      Typing indicators with multi-user support, read receipts,
+                      and instant message delete synced across all connected
+                      clients in real time.
+                    </div>
+                  </div>
+                </div>
+                <div class="pd-feature-img-wrap">
+                  <img
+                    src="/assets/images/ChatFlow/chatflow-realtime.png"
+                    alt="ChatFlow real-time messaging screenshot"
+                    class="pd-feature-img"
+                    onerror="this.parentElement.style.display = 'none'"
+                  />
+                </div>
+              </div>
+
+              <!-- Feature 2 -->
+              <div class="pd-feature pd-feature--img">
+                <div class="pd-feature-top">
+                  <span class="pd-feature-icon">📸</span>
+                  <div>
+                    <div class="pd-feature-title">Media Sharing & Lightbox</div>
+                    <div class="pd-feature-desc">
+                      Send images, videos, and files up to 25MB via Cloudinary.
+                      Tap any image to expand it full-screen in an in-app
+                      lightbox, with save-to-Photos support on mobile.
+                    </div>
+                  </div>
+                </div>
+                <div class="pd-feature-img-wrap">
+                  <img
+                    src="/assets/images/ChatFlow/chatflow-media.png"
+                    alt="ChatFlow media sharing screenshot"
+                    class="pd-feature-img"
+                    onerror="this.parentElement.style.display = 'none'"
+                  />
+                </div>
+              </div>
+
+              <!-- Feature 3 -->
+              <div class="pd-feature pd-feature--img">
+                <div class="pd-feature-top">
+                  <span class="pd-feature-icon">📱</span>
+                  <div>
+                    <div class="pd-feature-title">
+                      Cross-Platform — iOS, Android & Web
+                    </div>
+                    <div class="pd-feature-desc">
+                      One codebase powers all three platforms. The mobile app is
+                      built with React Native (Expo) and the web client with
+                      React + Vite, sharing the same backend, socket layer, and
+                      Firebase project.
+                    </div>
+                  </div>
+                </div>
+                <div class="pd-feature-img-wrap">
+                  <img
+                    src="/assets/images/ChatFlow/chatflow-crossplatform.png"
+                    alt="ChatFlow cross-platform screenshot"
+                    class="pd-feature-img"
+                    onerror="this.parentElement.style.display = 'none'"
+                  />
+                </div>
+              </div>
+
+              <!-- Feature 4 -->
+              <div class="pd-feature pd-feature--img">
+                <div class="pd-feature-top">
+                  <span class="pd-feature-icon">👤</span>
+                  <div>
+                    <div class="pd-feature-title">
+                      Unique Usernames & User Search
+                    </div>
+                    <div class="pd-feature-desc">
+                      Usernames are globally unique, chosen at sign-up, and
+                      locked permanently — enforced via a dedicated Firestore
+                      collection. Find any user by email or @username with live
+                      search.
+                    </div>
+                  </div>
+                </div>
+                <div class="pd-feature-img-wrap">
+                  <img
+                    src="/assets/images/ChatFlow/chatflow-search.png"
+                    alt="ChatFlow user search screenshot"
+                    class="pd-feature-img"
+                    onerror="this.parentElement.style.display = 'none'"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- How it's built -->
+          <div class="pd-section sr">
+            <h3 class="pd-section-heading">How It's Built</h3>
+            <p class="pd-body">
+              The backend is a <strong>Node.js + Express</strong> server running
+              <strong>Socket.IO</strong> for all real-time events — messaging,
+              typing indicators, presence, and conversation sync. It's deployed
+              to <strong>Railway</strong> and authenticated via Firebase ID
+              tokens verified server-side using the Firebase Admin SDK.
+            </p>
+            <p class="pd-body">
+              The <strong>React + Vite</strong> web client and
+              <strong>React Native (Expo)</strong>
+              mobile app share the same Firebase project and backend. Both use
+              context providers for auth and socket state so any component can
+              subscribe to real-time updates without prop drilling.
+            </p>
+            <p class="pd-body">
+              Media uploads go directly from the client to
+              <strong>Cloudinary</strong> via the backend upload route. The
+              CI/CD pipeline runs on <strong>GitHub Actions</strong> — push to
+              <code>main</code> and the web app deploys to Firebase Hosting and
+              the server deploys to Railway automatically.
+            </p>
+          </div>
+
+          <!-- Challenges -->
+          <div class="pd-section sr">
+            <h3 class="pd-section-heading">Challenges &amp; Learnings</h3>
+            <p class="pd-body">
+              The hardest problem was enforcing globally unique usernames
+              without race conditions. The solution was a dedicated
+              <code>usernames</code> Firestore collection where the document ID
+              is the username itself — Firestore's atomic writes make it
+              impossible for two users to claim the same username
+              simultaneously, and a <code>409</code> error is returned instead
+              of silently generating a fallback.
+            </p>
+            <p class="pd-body">
+              Getting Google OAuth to work consistently across web and both
+              mobile platforms (iOS and Android) with the same Firebase project
+              required separate client IDs per platform and careful handling of
+              the auth redirect flow in Expo — especially on physical devices
+              where
+              <code>localhost</code> doesn't resolve and the local IP must be
+              used instead.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── RIGHT: sidebar ── -->
+        <div class="col-lg-4">
+          <div class="pd-sidebar sr d2">
+            <!-- Live links -->
+            <a
+              href="https://sstigma-chatflow.web.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pd-live-btn"
+            >
+              View Web App ↗
+            </a>
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/Sstigma/chatflow"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pd-live-btn"
+              style="
+                margin-top: 0.5rem;
+                background: rgba(144, 205, 244, 0.08);
+                color: #90cdf4;
+                border: 1px solid rgba(144, 205, 244, 0.25);
+              "
+            >
+              View on GitHub ↗
+            </a>
+
+            <!-- Tech stack -->
+            <div class="pd-sidebar-section" style="margin-top: 1.5rem">
+              <div class="pd-sidebar-label">Tech Stack</div>
+              <div class="pd-stack-list">
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">Mobile</span>
+                  <span class="pd-stack-val">React Native (Expo)</span>
+                </div>
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">Web Client</span>
+                  <span class="pd-stack-val">React + Vite</span>
+                </div>
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">Backend</span>
+                  <span class="pd-stack-val">Node.js + Express</span>
+                </div>
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">Real-time</span>
+                  <span class="pd-stack-val">Socket.IO (WebSockets)</span>
+                </div>
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">Auth & DB</span>
+                  <span class="pd-stack-val">Firebase Auth + Firestore</span>
+                </div>
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">Media</span>
+                  <span class="pd-stack-val">Cloudinary (free tier)</span>
+                </div>
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">CI/CD</span>
+                  <span class="pd-stack-val">GitHub Actions</span>
+                </div>
+                <div class="pd-stack-row">
+                  <span class="pd-stack-layer">Hosting</span>
+                  <span class="pd-stack-val"
+                    >Railway (server) · Firebase Hosting (web) · Expo EAS
+                    (mobile)</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Project type -->
+            <div class="pd-sidebar-section">
+              <div class="pd-sidebar-label">Project Type</div>
+              <div class="pd-sidebar-val">
+                Personal Project · Full-Stack · Cross-Platform
+              </div>
+            </div>
+
+            <!-- Platforms -->
+            <div class="pd-sidebar-section">
+              <div class="pd-sidebar-label">Platforms</div>
+              <div class="pd-sidebar-val">iOS · Android · Web</div>
+            </div>
+
+            <!-- Key stats -->
+            <div class="pd-sidebar-section">
+              <div class="pd-sidebar-label">Highlights</div>
+              <div class="pd-sidebar-val">
+                Real-time WebSockets · 25MB media uploads · Atomic unique
+                usernames · Cross-Platform
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /pd-container -->
+
+    <!-- Feature image lightbox -->
+    <div class="pd-img-lightbox" id="pd-img-lightbox">
+      <button class="pd-img-lightbox-close" id="pd-lightbox-close">
+        &times;
+      </button>
+      <img src="" alt="" id="pd-lightbox-img" />
+    </div>
+
+    <!-- Scripts -->
+    <script src="/assets/styles/navbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        /* Scroll-reveal */
+        var targets = document.querySelectorAll(".sr");
+        if (!("IntersectionObserver" in window)) {
+          for (var i = 0; i < targets.length; i++)
+            targets[i].classList.add("in");
+        } else {
+          var obs = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("in");
+                  obs.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.08 },
+          );
+          targets.forEach(function (el) {
+            obs.observe(el);
+          });
+        }
+
+        /* Feature image lightbox */
+        var lightbox = document.getElementById("pd-img-lightbox");
+        var lbImg = document.getElementById("pd-lightbox-img");
+        var lbClose = document.getElementById("pd-lightbox-close");
+
+        document.querySelectorAll(".pd-feature-img").forEach(function (img) {
+          img.style.cursor = "zoom-in";
+          img.addEventListener("click", function () {
+            lbImg.src = this.src;
+            lbImg.alt = this.alt;
+            lightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
+            requestAnimationFrame(function () {
+              requestAnimationFrame(function () {
+                lightbox.classList.add("visible");
+              });
+            });
+          });
+        });
+
+        function closeLightbox() {
+          lightbox.classList.remove("visible");
+          document.body.style.overflow = "";
+          setTimeout(function () {
+            lightbox.classList.remove("active");
+            lbImg.src = "";
+          }, 280);
+        }
+        lbClose.addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", function (e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") closeLightbox();
+        });
+      });
+    </script>
+  </body>
+</html>

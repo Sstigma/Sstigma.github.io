@@ -13,13 +13,11 @@
     />
     <link rel="stylesheet" href="/assets/styles/general.css" />
     <link rel="stylesheet" href="/assets/styles/portfolio.css" />
-    <!-- Favicon for the website -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
     <title>Portfolio</title>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <button
         class="navbar-toggler ml-auto"
         type="button"
@@ -73,7 +71,7 @@
         <div class="pf-card-img-wrap">
           <!-- Replace with your real screenshot -->
           <img
-            src="/assets/images/WealthWise/WealthWise-Dashboard.png"
+            src="/assets/images/wealthwise-preview.png"
             alt="WealthWise screenshot"
             class="pf-card-img"
             onerror="
@@ -87,10 +85,10 @@
         <!-- Right: project info -->
         <div class="pf-card-body">
           <div class="pf-card-tags">
-            <span class="pf-tag-PC">React</span>
-            <span class="pf-tag-PC">Node.js</span>
-            <span class="pf-tag-PC">Firebase</span>
-            <span class="pf-tag-PC">Full-Stack</span>
+            <span class="pf-tag">React</span>
+            <span class="pf-tag">Node.js</span>
+            <span class="pf-tag">Firebase</span>
+            <span class="pf-tag">Full-Stack</span>
           </div>
           <h2 class="pf-card-title">WealthWise</h2>
           <p class="pf-card-desc">
@@ -110,13 +108,113 @@
           </div>
         </div>
       </a>
+      <!-- ════ END PROJECT CARD ════ -->
+
+      <!-- ════════════════════════════════════════
+           PROJECT CARD — ChatFlow
+      ════════════════════════════════════════ -->
+      <a class="pf-card sr" href="/content/pages/portfolio/chatFlow.html">
+        <!-- Left: project photo -->
+        <div class="pf-card-img-wrap">
+          <img
+            src="/assets/images/chatflow-preview.png"
+            alt="ChatFlow screenshot"
+            class="pf-card-img"
+            onerror="
+              this.src =
+                'https://placehold.co/600x400/1a1a2e/90cdf4?text=ChatFlow'
+            "
+          />
+          <div class="pf-card-img-overlay"></div>
+        </div>
+
+        <!-- Right: project info -->
+        <div class="pf-card-body">
+          <div class="pf-card-tags">
+            <span class="pf-tag">React Native</span>
+            <span class="pf-tag">Socket.IO</span>
+            <span class="pf-tag">Firebase</span>
+            <span class="pf-tag">Cross-Platform</span>
+          </div>
+          <h2 class="pf-card-title">ChatFlow</h2>
+          <p class="pf-card-desc">
+            A full-stack, cross-platform real-time messaging app running on iOS,
+            Android, and Web. Features WebSocket messaging, media sharing up to
+            25MB, Google OAuth, and atomic unique usernames.
+          </p>
+          <div class="pf-card-meta">
+            <span class="pf-card-meta-item">
+              <span class="pf-meta-dot"></span> React Native · Node.js ·
+              Socket.IO · Firebase · Railway
+            </span>
+          </div>
+          <div class="pf-card-cta">
+            View project <span class="pf-cta-arrow">→</span>
+          </div>
+        </div>
+      </a>
+      <!-- ════ END PROJECT CARD ════ -->
+
+      <!--
+        ════════════════════════════════════════
+        TEMPLATE TO ADD ANOTHER PROJECT
+
+        <a class="pf-card sr" href="/content/pages/projects/your-project.html">
+          <div class="pf-card-img-wrap">
+            <img src="/assets/images/your-screenshot.png" alt="Project name"
+              class="pf-card-img"
+              onerror="this.src='https://placehold.co/600x400/1a1a2e/90cdf4?text=Project'" />
+            <div class="pf-card-img-overlay"></div>
+          </div>
+          <div class="pf-card-body">
+            <div class="pf-card-tags">
+              <span class="pf-tag">Tag 1</span>
+              <span class="pf-tag">Tag 2</span>
+            </div>
+            <h2 class="pf-card-title">Project Name</h2>
+            <p class="pf-card-desc">Short description (2-3 lines)</p>
+            <div class="pf-card-meta">
+              <span class="pf-card-meta-item">
+                <span class="pf-meta-dot"></span> Tech · Stack · Here
+              </span>
+            </div>
+            <div class="pf-card-cta">View project <span class="pf-cta-arrow">→</span></div>
+          </div>
+        </a>
+        ════════════════════════════════════════
+      -->
     </div>
+    <!-- /pf-list -->
 
     <!-- Scripts -->
     <script src="/assets/styles/navbar.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="/assets/functionalities/Portfolio/portfolio.js"></script>
+    <script>
+      /* Scroll-reveal — reuses your existing .sr system */
+      document.addEventListener("DOMContentLoaded", function () {
+        var targets = document.querySelectorAll(".sr");
+        if (!("IntersectionObserver" in window)) {
+          for (var i = 0; i < targets.length; i++)
+            targets[i].classList.add("in");
+          return;
+        }
+        var obs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in");
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+        targets.forEach(function (el) {
+          obs.observe(el);
+        });
+      });
+    </script>
   </body>
 </html>
